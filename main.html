@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Anasayfa</title>
+</head>
+<body>
+    <header>
+        
+        <nav>
+            <div class="navbar">
+                <div class="logo">
+                    <a href="home.html"><img src="images/logo.png" alt="Logo"></a>
+                </div>
+                <div class="middle-content">
+                    <img src="images/text.png" alt="">
+                </div>          
+                <div class="language-buttons">
+                    <button id="english-button">
+                        <span data-en="ENGLISH" data-tr="İNGİLİZCE">ENGLISH</span>
+                    </button>
+                    <button id="turkish-button">
+                        <span data-en="TURKISH" data-tr="TÜRKÇE">TURKISH</span>
+                    </button>
+                </div>        
+                <div class="contact-button">
+                    <a href="main.html"><img src="images/contact.png" alt="Contact"></a>
+                </div>                           
+            </div>
+        </nav>
+    </header>
+
+    <h1 class="page-title" data-en="My Projects" data-tr="Projelerim">My Projects</h1>
+
+    <main>
+
+        <div class="card" data-description="This is a statement.">
+            <div class="project-name" data-en="Project 1" data-tr="Proje 1">Project 1</div>
+            <div class="image-container">
+                <img src="images/iphone.png" alt="Proje Resmi">
+            </div>
+            <div class="extra">
+                <span class="abstract" data-en="Abstract" data-tr="Konu">Abstract</span>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="project-name">Project 2</div>
+            <div class="image-container">
+                <img src="images/iphone.png" alt="Proje Resmi">
+            </div>
+            <div class="extra">
+                <span class="abstract">Abstract</span>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="project-name">Project 3</div>
+            <div class="image-container">
+                <img src="images/iphone.png" alt="Proje Resmi">
+            </div>
+            <div class="extra">
+                <span class="abstract">Abstract</span>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="project-name">Project 4</div>
+            <div class="image-container">
+                <img src="images/iphone.png" alt="Proje Resmi">
+            </div>
+            <div class="extra">
+                <span class="abstract">Abstract</span>
+            </div>
+        </div>
+        
+    </main>    
+
+    <section id="modal-1" class="modal-container">
+        <div class="modal-dialog">
+            <span class="modal-close">&times;</span>
+            <div class="modal-content">
+                <h2 id="modal-title">Başlık</h2>
+                <p id="modal-description">Açıklama metni buraya gelecek.</p>
+                <img id="modal-image" src="" alt="Görsel">
+                <button class="play-button">Go</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p data-en="&copy; 2024 Lexical Games. All Rights Reserved." data-tr="&copy; 2024 Lexical Games. Tüm Hakları Saklıdır.">&copy; 2024 Lexical Games. All Rights Reserved.</p>
+    </footer>
+
+    <script src="main.js"></script>
+    <script src="localization.js"></script>
+</body>
+</html>
