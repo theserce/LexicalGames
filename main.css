@@ -28,10 +28,11 @@ header {
   justify-content: space-between;
   align-items: center;
   z-index: 1000;
+  height: 90px;
 }
 
 .logo {
-  margin-left: 40px;
+  margin-left: 20px;
     color: white;
     font-size: 24px;
 }
@@ -47,7 +48,6 @@ header {
 }
 
 .middle-content img {
-  margin-left: 40px;
     width: 400px;
     height: 70px;
 }
@@ -55,6 +55,36 @@ header {
 .contact-button img {
     height: 70px;
     margin-right: 20px;
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    height: 90px;
+  }
+
+  .logo img {
+    width: 70px;
+    height: auto;
+  }
+
+  .middle-content img {
+    width: 250px;
+    height: auto;
+  }
+
+  .language-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 20px;
+  }
+
+  .language-buttons button {
+    margin: 5px 0;
+    width: auto;
+    padding: 5px 15px;
+    font-size: 14px;
+  }
 }
 
 .language-buttons {
@@ -175,6 +205,12 @@ img {
   margin-top: 10px;
 }
 
+.go-button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .play-button {
   display: inline-block;
   width: 60px;
@@ -183,9 +219,6 @@ img {
   border-radius: 50%;
   color: #fff;
   font-size: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
