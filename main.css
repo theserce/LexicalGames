@@ -53,6 +53,7 @@ header {
 }
 
 .contact-button img {
+    width: 70px;
     height: 70px;
     margin-right: 20px;
 }
@@ -84,6 +85,11 @@ header {
     width: auto;
     padding: 5px 15px;
     font-size: 14px;
+  }
+
+  .contact-button img {
+    width: 70px;
+    height: auto;
   }
 }
 

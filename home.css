@@ -61,8 +61,8 @@ header {
 }
 
 .contact-button img {
-  height: 70px;
-  width: auto;
+  width: 70px;
+    height: 70px;
 }
 
 @media (max-width: 900px) {
@@ -93,6 +93,10 @@ header {
     padding: 5px 15px;
     font-size: 14px;
   }  
+  .contact-button img {
+    width: 70px;
+    height: auto;
+  }
 }
 
 @media (max-width: 600px) {
@@ -123,19 +127,25 @@ header {
     padding: 5px 15px;
     font-size: 14px;
   }  
+
+  .contact-button img {
+    width: 70px;
+    height: auto;
+  }
 }
+
 @media (max-width: 400px) {
   .navbar {
     height: 90px;
   }
 
   .logo img {
-    width: 55px;
+    width: 35px;
     height: auto;
   }
 
   .middle-content img {
-    width: 180px;
+    width: 140px;
     height: auto;
   }
 
