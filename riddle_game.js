@@ -37,6 +37,14 @@ function getRandomRiddle() {
     return riddles[randomIndex];
 }
 
+document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+});
+
+document.addEventListener('copy', function(e) {
+    e.preventDefault();
+    alert('Kopyalama işlemi devre dışı bırakıldı.');
+});
 
 document.getElementById('english-button').addEventListener('click', function () {
     currentLanguage = 'en';
