@@ -28,7 +28,7 @@
                     </button>
                 </div>
                 <div class="contact-button">
-                    <a href="contact.html"><img src="images/contact.png" alt="Contact"></a>
+                    <img src="images/contact.png" alt="Contact">
                 </div>
             </div>
         </nav>        
@@ -56,8 +56,20 @@
         <p data-en="&copy; 2024 Lexical Games. All Rights Reserved." data-tr="&copy; 2024 Lexical Games. Tüm Hakları Saklıdır.">&copy; 2024 Lexical Games. All Rights Reserved.</p>
     </footer>
 
-    <script src="riddle_game.js"></script>
+    <section id="modal-1" class="modal-container">
+        <div class="modal-dialog">
+            <span class="modal-close">&times;</span>
+            <div class="modal-content">
+                <img id="modal-image" src="images/me.png" alt="Görsel">
+                <h2 id="modal-title" data-en="Hi, I'm Serhat Çelik." data-tr="Merhaba, Ben Serhat Çelik.">Hi, I'm Serhat Çelik.</h2>
+                <p id="modal-description" data-en="I graduated from Ondokuz Mayıs University, Department of Computer Engineering. I am passionate about design and software and I aim to combine creativity and functionality in my work." data-tr="Ondokuz Mayıs Üniversitesi Bilgisayar Mühendisliği bölümünden mezun oldum. Tasarım ve yazılım alanlarında tutkulu biriyim ve işimde yaratıcılığı ve fonksiyonelliği bir araya getirmeyi amaçlıyorum.">I graduated from Ondokuz Mayıs University, Department of Computer Engineering. I am passionate about design and software and I aim to combine creativity and functionality in my work.</p>                
+                <div class="go-button"><button id="play-button" class="play-button" data-en="My Projects" data-tr="Projelerim">My Projects</button></div>                
+            </div>
+        </div>
+    </section>
+
     <script src="localization.js"></script>
+    <script src="modal.js"></script>
 
 </body>
 </html>

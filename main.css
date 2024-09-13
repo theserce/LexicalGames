@@ -158,6 +158,94 @@ img {
   color: #b1cae8;
 }
 
+.modal-container2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal-container2.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-dialog2 {
+  width: 60%;
+  max-width: 500px;
+  height: auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.modal-content2 {
+  position: relative;
+  color: #693f71;
+  padding-bottom: 20px;
+}
+
+.modal-content2 h2 {
+  margin-top: 0;
+}
+
+.modal-content2 img {
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
+
+.go-button2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.play-button2 {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  background-color: #693f71;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.play-button2:hover {
+  background-color: #b1cae8;
+}
+
+.modal-content2 .play-button2 {
+  display: block;
+}
+
+.modal-close2 {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 40px;
+  cursor: pointer;
+  color: #693f71;
+}
+
 .modal-container {
   display: flex;
   align-items: center;
@@ -201,17 +289,22 @@ img {
   padding-bottom: 20px;
 }
 
-.modal-content h2 {
-  margin-top: 0;
-}
-
 .modal-content img {
-  width: 100%;
+  width: 50%;
   height: auto;
   margin-top: 10px;
 }
 
+.modal-content h2 {
+  margin-top: 0;
+}
+
+.modal-content p {
+  margin-top: 5%;
+}
+
 .go-button{
+  margin-top: 5%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -219,12 +312,11 @@ img {
 
 .play-button {
   display: inline-block;
-  width: 60px;
-  height: 60px;
+  width: 40%;
+  height: 50%;
   background-color: #693f71;
-  border-radius: 50%;
   color: #fff;
-  font-size: 24px;
+  font-size: 25px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -241,18 +333,28 @@ img {
   position: absolute;
   top: 10px;
   right: 10px;
-  font-size: 24px;
+  font-size: 40px;
   cursor: pointer;
-  color: #000;
+  color: #693f71;
 }
 
 @media (max-width: 600px) {
-  .modal-dialog {
+  .modal-dialog2 {
     width: 90%;
   }
 
-  .modal-content img {
+  .modal-content2 img {
     max-width: 100%;
+  }
+
+  .play-button {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 400px) {
+  .play-button {
+    font-size: 13px;
   }
 }
 

@@ -199,12 +199,12 @@ main{
   margin-top: 7%;
   text-align:center;
   position: relative;
-  margin-top: 0; /* Varsayılan margin-top */
-    position: relative;
+  margin-top: 0;
+  position: relative;
 }
 
 .main-title {
-  font-size: 120px; /* Font boyutunun ekran genişliğine göre ayarlanması */
+  font-size: 120px;
   margin-top: 7%;
 }
 
@@ -330,6 +330,98 @@ main{
     color: #693f71;
 }
 
+.modal-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal-container.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-dialog {
+  width: 60%;
+  max-width: 500px;
+  height: auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.modal-content {
+  position: relative;
+  color: #693f71;
+  padding-bottom: 20px;
+}
+
+.modal-content img {
+  width: 50%;
+  height: auto;
+  margin-top: 10px;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+}
+
+.modal-content p {
+  margin-top: 5%;
+}
+
+.go-button{
+  margin-top: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.play-button {
+  display: inline-block;
+  width: 40%;
+  height: 50%;
+  background-color: #693f71;
+  color: #fff;
+  font-size: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.play-button:hover {
+  background-color: #b1cae8;
+}
+
+.modal-content .play-button {
+  display: block;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 40px;
+  cursor: pointer;
+  color: #693f71;
+}
+
 /* Medya sorguları */
 @media (max-width: 1200px) {
   .main-title {
@@ -358,7 +450,7 @@ main{
 
   .info a {
       font-size: 24px;
-  }
+  }  
 }
 
 @media (max-width: 600px) {
@@ -378,12 +470,16 @@ main{
   .info a {
       font-size: 20px;
   }
+
+  .play-button {
+    font-size: 15px;
+  }
 }
 
 @media (max-width: 400px) {
   .main-title {
     font-size: 27px;
-    margin-top: 26%;
+    margin-top: 38%;
   }
 
   .riddle-box {
@@ -396,6 +492,10 @@ main{
 
   .info a {
       font-size: 18px;
+  }
+
+  .play-button {
+    font-size: 13px;
   }
 }
 

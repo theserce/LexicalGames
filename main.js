@@ -1,14 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
   function openModal(title, description, imageSrc) {
-      const modal = document.querySelector('#modal-1');
-      modal.querySelector('#modal-title').textContent = title;
-      modal.querySelector('#modal-description').textContent = description;
-      modal.querySelector('#modal-image').src = imageSrc;
+      const modal = document.querySelector('#modal-2');
+      modal.querySelector('#modal-title2').textContent = title;
+      modal.querySelector('#modal-description2').textContent = description;
+      modal.querySelector('#modal-image2').src = imageSrc;
       modal.classList.add('show');
   }
 
   function closeModal() {
-      const modal = document.querySelector('#modal-1');
+      const modal = document.querySelector('#modal-2');
       modal.classList.remove('show');
   }
 
@@ -23,9 +23,9 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   });
 
-  document.querySelector('.modal-close').addEventListener('click', closeModal);
+  document.querySelector('.modal-close2').addEventListener('click', closeModal);
 
-  document.querySelector('#modal-1').addEventListener('click', (e) => {
+  document.querySelector('#modal-2').addEventListener('click', (e) => {
       if (e.target === e.currentTarget) {
           closeModal();
       }
