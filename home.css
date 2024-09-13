@@ -387,6 +387,27 @@ main{
   margin-top: 5%;
 }
 
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.social-icon {
+  font-size: 20px;
+  color: #693f71;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  color: #b1cae8;
+}
+
+.social-icon i {
+  transition: color 0.3s ease;
+}
+
 .go-button{
   margin-top: 5%;
   display: flex;
@@ -515,7 +536,7 @@ footer {
   background-color: #693f71;
   color: #b1cae8;
   text-align: center;
-  padding: 5px 0;
+  padding: 20px 0;
   position: fixed;
   bottom: 0;
   left: 0;

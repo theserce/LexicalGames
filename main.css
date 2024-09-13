@@ -303,6 +303,27 @@ img {
   margin-top: 5%;
 }
 
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.social-icon {
+  font-size: 20px;
+  color: #693f71;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  color: #b1cae8;
+}
+
+.social-icon i {
+  transition: color 0.3s ease;
+}
+
 .go-button{
   margin-top: 5%;
   display: flex;
