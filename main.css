@@ -203,13 +203,47 @@ img {
 
 .modal-content2 h2 {
   margin-top: 0;
+  margin-bottom: 10px;
 }
 
-.modal-content2 img {
+.carousel-container {
+  position: relative;
+  width: 30%;
+  max-width: 250px;
+  margin: auto;
+}
+
+.carousel-slide {
+  display: none;
   width: 100%;
   height: auto;
-  margin-top: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
+
+.carousel-slide.active {
+  display: block;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.carousel-button.prev {
+  left: 15%;
+}
+
+.carousel-button.next {
+  right: 15%;
+}
+
 
 .go-button2{
   display: flex;
