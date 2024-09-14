@@ -1,4 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const lightbox = document.querySelector('#lightbox');
+    const lightboxImage = document.querySelector('#lightbox-image');
+    const lightboxClose = document.querySelector('.lightbox-close');
+
     function openModal(title, descriptionEN, descriptionTR, images) {
         const modal = document.querySelector('#modal-2');
         modal.querySelector('#modal-title2').textContent = title;
@@ -14,6 +18,10 @@ document.addEventListener('DOMContentLoaded', () => {
             imgElement.src = imageSrc;
             imgElement.classList.add('carousel-slide');
             if (index === 0) imgElement.classList.add('active');
+            imgElement.addEventListener('click', () => {
+                lightboxImage.src = imageSrc;
+                lightbox.classList.add('show');
+            });
             carouselContainer.appendChild(imgElement);
         });
 
@@ -23,6 +31,10 @@ document.addEventListener('DOMContentLoaded', () => {
     function closeModal() {
         const modal = document.querySelector('#modal-2');
         modal.classList.remove('show');
+    }
+
+    function closeLightbox() {
+        lightbox.classList.remove('show');
     }
 
     const cards = document.querySelectorAll('.card');
@@ -90,4 +102,12 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         switchToTurkish();
     }
+
+    // Lightbox close event
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === e.currentTarget) {
+            closeLightbox();
+        }
+    });
 });
