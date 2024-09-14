@@ -1,11 +1,19 @@
+@font-face {
+  font-family: 'CustomFont';
+  src: url('fonts/OctoberNight.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'CustomFont', sans-serif;
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'CustomFont', sans-serif;
   background-color: #b1cae8;
 }
 
@@ -114,10 +122,10 @@ header {
 }
 
 .page-title {
-  font-size: 40px;
+  font-size: 50px;
   color: #693f71;
   text-align: center;
-  margin-top: 120px;
+  margin-top: 110px;
 }
 
 main {
@@ -125,7 +133,7 @@ main {
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 20px;
-  margin-top: 10px;
+  margin-top: 5px;
 }
 
 .card {
@@ -140,6 +148,7 @@ main {
 }
 
 .project-name {
+  font-size: larger;
   font-weight: bold;
   margin-bottom: 10px;
   color: #b1cae8;
@@ -335,7 +344,8 @@ img {
 }
 
 .modal-content p {
-  margin-top: 5%;
+  margin-top: 3%;
+  font-size: large;
 }
 
 .social-icons {

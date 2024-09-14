@@ -2,14 +2,21 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700");
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap");
 
+@font-face {
+  font-family: 'CustomFont';
+  src: url('fonts/OctoberNight.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'CustomFont', sans-serif;
 }
 
 body {
-  font-family: Arial, sans-serif;
   background-color: #b1cae8;    
 }
 
@@ -384,7 +391,8 @@ main{
 }
 
 .modal-content p {
-  margin-top: 5%;
+  margin-top: 3%;
+  font-size: large;
 }
 
 .social-icons {
