@@ -3,7 +3,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const lightboxImage = document.querySelector('#lightbox-image');
     const lightboxClose = document.querySelector('.lightbox-close');
 
-    function openModal(title, descriptionEN, descriptionTR, images) {
+    let currentUrl = '';
+
+    function openModal(title, descriptionEN, descriptionTR, images, url) {
         const modal = document.querySelector('#modal-2');
         modal.querySelector('#modal-title2').textContent = title;
 
@@ -25,7 +27,17 @@ document.addEventListener('DOMContentLoaded', () => {
             carouselContainer.appendChild(imgElement);
         });
 
+        const goButton = document.querySelector('#go-button');
+    
+        if (url) {
+            goButton.style.display = 'block';
+            currentUrl = url;
+        } else {
+            goButton.style.display = 'none';
+        }
+
         modal.classList.add('show');
+
     }
 
     function closeModal() {
@@ -45,7 +57,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const descriptionEN = card.getAttribute('data-description-en');
             const descriptionTR = card.getAttribute('data-description-tr');
             const imageSrcList = card.getAttribute('data-images').split(',').map(src => src.trim());
-            openModal(title, descriptionEN, descriptionTR, imageSrcList);
+            const url = card.getAttribute('data-url');
+            openModal(title, descriptionEN, descriptionTR, imageSrcList, url);
         });
     });
 
@@ -54,6 +67,13 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('#modal-2').addEventListener('click', (e) => {
         if (e.target === e.currentTarget) {
             closeModal();
+        }
+    });
+
+    const goButton = document.querySelector('#go-button');
+    goButton.addEventListener('click', () => {
+        if (currentUrl) {
+            window.location.href = currentUrl;
         }
     });
 
@@ -103,11 +123,19 @@ document.addEventListener('DOMContentLoaded', () => {
         switchToTurkish();
     }
 
-    // Lightbox close event
     lightboxClose.addEventListener('click', closeLightbox);
     lightbox.addEventListener('click', (e) => {
         if (e.target === e.currentTarget) {
             closeLightbox();
         }
     });
+});
+
+document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+});
+
+document.addEventListener('copy', function(e) {
+    e.preventDefault();
+    alert('Kopyalama işlemi devre dışı bırakıldı.');
 });
